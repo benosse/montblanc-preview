@@ -1,15 +1,9 @@
-import { defineConfig } from 'vite';
-import { svelte } from '@sveltejs/vite-plugin-svelte';
+import { defineConfig } from 'vite'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
+
+const repo = 'montblanc-preview'
 
 export default defineConfig({
-  plugins: [
-    svelte()
-  ],
-  //build: {
-  //  lib: {
-  //    entry: './src/App.svelte',
-  //    formats: ['es'],
-  //    name: 'Map3D'
-  //  }
-  //}
-});
+  plugins: [svelte()],
+  base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
+})
