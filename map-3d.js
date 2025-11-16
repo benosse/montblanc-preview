@@ -30294,7 +30294,7 @@ class HS extends L_ {
     return super.load(e, s, n, r);
   }
 }
-const VS = "/models/scene_full_30.glb", GS = "/textures/autumn_field_puresky_1k.hdr", Vh = new zn(0, Math.PI * -0.2, 0);
+const VS = "models/scene_full_30.glb", GS = "textures/autumn_field_puresky_1k.hdr", Vh = new zn(0, Math.PI * -0.2, 0);
 class WS {
   //Loaded objects
   gltf = null;
