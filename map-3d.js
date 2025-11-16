@@ -28770,7 +28770,7 @@ ri.removeAll.bind(ri);
 ri.add.bind(ri);
 ri.remove.bind(ri);
 ri.update.bind(ri);
-const AS = new ru(), gl = 0.7, wS = 0.25, RS = new O(0, 1, 0), CS = new vn();
+const AS = new ru(), gl = 0.6, wS = 0.25, RS = new O(0, 1, 0), CS = new vn();
 class IS {
   camera;
   domElement;
@@ -28797,7 +28797,7 @@ class IS {
       else {
         let t = this.getPointerStrength(this.pointerPosition.x, this.domElement.clientWidth);
         if (this.pullStrength = vs.lerp(this.pullStrength, t, 0.1), Math.abs(this.pullStrength) > 0.01) {
-          const n = this.getTarget(-Math.sign(this.pullStrength) * Math.PI / 12), r = this.camera.quaternion.clone();
+          const n = this.getTarget(-Math.sign(this.pullStrength) * Math.PI / 8), r = this.camera.quaternion.clone();
           this.camera.lookAt(n);
           const s = this.camera.quaternion.clone();
           this.camera.quaternion.copy(r);
@@ -30539,7 +30539,7 @@ Ci(Ud, {}, [], [], !0);
 var _i = Bf(() => gt), tE = /* @__PURE__ */ Rn('<div id="intro" class="svelte-1m4dqmw"><!></div>'), nE = /* @__PURE__ */ Rn('<div id="experience" class="svelte-1m4dqmw"><div id="scene" class="svelte-1m4dqmw"><!></div> <!> <div id="buttons" class="svelte-1m4dqmw"><button id="mode-button"> </button> <button id="quit-button">Leave experience</button></div></div>');
 const iE = {
   hash: "svelte-1m4dqmw",
-  code: `#experience.svelte-1m4dqmw {position:fixed;inset:0;z-index:9999;width:100vw;height:100vh;}#buttons.svelte-1m4dqmw {position:absolute;top:0%;right:0%;}#scene.svelte-1m4dqmw,
+  code: `#experience.svelte-1m4dqmw {position:fixed;inset:0;z-index:9999;width:100vw;height:100vh;}#buttons.svelte-1m4dqmw {position:absolute;bottom:10px;right:0;left:0;display:flex;justify-content:center;gap:10px;}#scene.svelte-1m4dqmw,
 #intro.svelte-1m4dqmw {position:absolute;inset:0;}`
 };
 function Fd(i, e) {
