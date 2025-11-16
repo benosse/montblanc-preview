@@ -30591,7 +30591,7 @@ Ci(Od, {}, [], [], !0);
 var aE = /* @__PURE__ */ Rn('<div id="app-root" class="svelte-t67cyk"><!></div>');
 const oE = {
   hash: "svelte-t67cyk",
-  code: "#app-root.svelte-t67cyk {display:block;position:relative;}"
+  code: "#app-root.svelte-t67cyk {display:block;position:relative;font-family:sans-serif;}"
 };
 function Bd(i, e) {
   Ki(e, !0), Ri(i, oE);
