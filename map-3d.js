@@ -30539,7 +30539,7 @@ Ci(Ud, {}, [], [], !0);
 var _i = Bf(() => gt), tE = /* @__PURE__ */ Rn('<div id="intro" class="svelte-1m4dqmw"><!></div>'), nE = /* @__PURE__ */ Rn('<div id="experience" class="svelte-1m4dqmw"><div id="scene" class="svelte-1m4dqmw"><!></div> <!> <div id="buttons" class="svelte-1m4dqmw"><button id="mode-button"> </button> <button id="quit-button">Leave experience</button></div></div>');
 const iE = {
   hash: "svelte-1m4dqmw",
-  code: `#experience.svelte-1m4dqmw {position:fixed;inset:0;z-index:9999;width:100vw;height:100vh;}#buttons.svelte-1m4dqmw {position:absolute;bottom:10px;right:0;left:0;display:flex;justify-content:center;gap:10px;}#scene.svelte-1m4dqmw,
+  code: `#experience.svelte-1m4dqmw {position:fixed;inset:0;z-index:9999;}#buttons.svelte-1m4dqmw {position:absolute;bottom:20px;right:0;left:0;display:flex;justify-content:center;gap:10px;}#scene.svelte-1m4dqmw,
 #intro.svelte-1m4dqmw {position:absolute;inset:0;}`
 };
 function Fd(i, e) {
