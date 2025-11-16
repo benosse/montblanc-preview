@@ -1,10 +1,4 @@
-<script lang="ts">
-  import Scene from "./lib/Scene.svelte";
-</script>
-
-<div id="app">
-  <Scene mode="summer"></Scene>
-</div>
+<div><map-3d mode="summer" /></div>
 
 <style lang="scss">
   #app {
