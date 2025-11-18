@@ -30300,7 +30300,7 @@ class VS extends D_ {
     return super.load(e, s, n, r);
   }
 }
-const GS = "models/scene_full_31.glb", WS = "textures/autumn_field_puresky_1k.hdr", Gh = new zn(0, Math.PI * -0.2, 0);
+const GS = "models/scene_full_32.glb", WS = "textures/autumn_field_puresky_1k.hdr", Gh = new zn(0, Math.PI * -0.2, 0);
 class XS {
   //Loaded objects
   gltf = null;
