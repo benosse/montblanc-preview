@@ -30328,7 +30328,7 @@ class aE {
   }
   accelerate() {
     const e = ee.transition;
-    e && (e.speed === Pl ? e.speed = 1 : (e.speed *= 2, e.speed = Math.min(sE, e.speed)));
+    e && (e.speed === Pl ? e.speed = 1 : (e.speed *= 1.75, e.speed = Math.min(sE, e.speed)));
   }
   deccelerate() {
     const e = ee.transition;
@@ -30698,7 +30698,7 @@ class EE {
     e.attach(t), this.panControls = new xE(t, this.renderer.domElement), t.attach(this.camera), this.lookAroundControls = new iE(this.renderer.domElement, this.camera);
   }
   goToZone(e) {
-    ee.transition || !this.animationMixerControls || (this.animationMixerControls.jumpTo(e), ee.targetZoom = void 0, this.panControls && this.panControls.reset(), this.lookAroundControls && this.lookAroundControls.reset());
+    this.animationMixerControls && (this.animationMixerControls.jumpTo(e), ee.targetZoom = void 0, this.panControls && this.panControls.reset(), this.lookAroundControls && this.lookAroundControls.reset());
   }
   openPOI(e) {
     if (!this.scene || !this.camera) return;
