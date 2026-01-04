@@ -32929,12 +32929,12 @@ class PP {
       nl
     ), this.textures = VC(e, {
       beautySummer: {
-        src: "/textures/webgl/beauty_summer.png",
+        src: "textures/webgl/beauty_summer.png",
         flipY: 1,
         format: e.RGB
       },
       beautyWinter: {
-        src: "/textures/webgl/beauty_winter.png",
+        src: "textures/webgl/beauty_winter.png",
         flipY: 1,
         format: e.RGB
       },
@@ -32955,7 +32955,7 @@ class PP {
       //     min: gl.LINEAR,
       // },
       noise: {
-        src: "/textures/webgl/hash_lowbias_512_8.png",
+        src: "textures/webgl/hash_lowbias_512_8.png",
         flipY: 1,
         internalFormat: e.R8,
         format: e.RED,
