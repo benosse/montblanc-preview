@@ -32929,12 +32929,12 @@ class PP {
       nl
     ), this.textures = VC(e, {
       beautySummer: {
-        src: "textures/webgl/beauty_summer.png",
+        src: "textures/webgl/beauty_summer.webp",
         flipY: 1,
         format: e.RGB
       },
       beautyWinter: {
-        src: "textures/webgl/beauty_winter.png",
+        src: "textures/webgl/beauty_winter.webp",
         flipY: 1,
         format: e.RGB
       },
