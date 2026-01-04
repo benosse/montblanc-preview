@@ -30908,7 +30908,7 @@ async function cw() {
   }
   return { gltf: Nn.gltf, envTexture: Nn.envTexture };
 }
-const _p = new ii(0, Math.PI * -0.2, 0), uw = new ql(9941186, 50, 250), fw = new ql(11911111, 50, 150);
+const _p = new ii(0, Math.PI * -0.2, 0), uw = new ql(9941186, 50, 250), fw = new ql(11911111, 0, 225);
 class hw {
   //Loaded objects
   gltf;
