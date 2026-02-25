@@ -30988,7 +30988,7 @@ class dR extends KE {
     return super.load(e, s, i, r);
   }
 }
-const pR = "models/scene_full_63.glb", mR = "textures/autumn_field_puresky_1k.hdr", Un = Jr({
+const pR = "models/scene_full_66.glb", mR = "textures/autumn_field_puresky_1k.hdr", Un = Jr({
   envTexture: void 0,
   gltf: void 0,
   hasLoaded: !1,
@@ -33450,7 +33450,7 @@ function t0(n, e) {
       qr(et, {
         content: "Mont Blanc",
         layout: "bottom-right",
-        coordinates: { x: 0.56, y: 0.485 },
+        coordinates: { x: 0.56, y: 0.4725 },
         marker: "cross"
       });
       var Q = Xt(et, 2);
@@ -33595,7 +33595,7 @@ customElements.define("map-3d", Di(n0, { mode: {} }, [], [], !0));
 var nD = /* @__PURE__ */ jt('<div id="app" class="svelte-1n46o8q"><!></div>');
 const iD = {
   hash: "svelte-1n46o8q",
-  code: `#app.svelte-1n46o8q {width:100vw;height:auto;aspect-ratio:2.6;background-color:black;}
+  code: `#app.svelte-1n46o8q {width:100vw;height:auto;aspect-ratio:2.2;background-color:black;}
 
 @media (max-width: 480px) {#app.svelte-1n46o8q {aspect-ratio:1;}
 }`
