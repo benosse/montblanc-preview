@@ -3380,7 +3380,7 @@ const q_ = {
         enabled: !0,
         objectName: "panoramique_mt_blanc",
         name: "Panoramique Mont Blanc",
-        season: ft.Summer,
+        season: ft.Both,
         cameraName: "cam_panoramique_mt_blanc"
       },
       {
