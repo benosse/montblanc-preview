@@ -32993,8 +32993,8 @@ class aP {
   quadBufferInfo;
   textures;
   elapsed = 0;
-  summerBackground = "";
-  winterBackground = "";
+  summerBackground;
+  winterBackground;
   //Uniforms
   //Will be overriden before first display by the update loop in the Svelte component
   mouse = { x: 0, y: 0 };
@@ -33005,8 +33005,8 @@ class aP {
   cloudCoverage = 0.15;
   mouseRadius = 0.8;
   shadows = 1;
-  constructor(e) {
-    this.gl = e, this.cloudsProgramInfo = JI(e, [rP, sP]), this.quadBufferInfo = KR(e, oP), this.textures = CC(e, {
+  constructor(e, t, i) {
+    this.gl = e, this.cloudsProgramInfo = JI(e, [rP, sP]), this.quadBufferInfo = KR(e, oP), this.summerBackground = t, this.winterBackground = i, this.textures = CC(e, {
       beautySummer: {
         src: this.summerBackground,
         flipY: 1,
@@ -33152,7 +33152,7 @@ function Cv(n, e) {
   wh(() => {
     let te = gt(g).getContext("webgl2", { premultipliedAlpha: !1 });
     if (!te) throw new Error("WebGL2 required");
-    b = te, p = new aP(b), p.summerBackground = s, p.winterBackground = o;
+    b = te, p = new aP(b, s, o);
   });
   function I(te) {
     if (!p || t() === wt.Map) return;
