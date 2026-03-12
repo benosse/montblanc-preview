@@ -3434,7 +3434,7 @@ const N_ = {
         objectName: "station_mt_arbois",
         name: "Mont d'Arbois",
         season: pt.Both,
-        cameraName: "cam_station_cote_2000"
+        cameraName: "cam_station_mt_arbois"
       },
       {
         enabled: !0,
