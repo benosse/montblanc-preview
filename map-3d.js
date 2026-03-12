@@ -3469,7 +3469,7 @@ const N_ = {
       {
         enabled: !0,
         objectName: "station_dolonne",
-        name: "Courmayer",
+        name: "Courmayeur",
         season: pt.Both,
         cameraName: "cam_station_dolonne"
       }
