@@ -32954,27 +32954,27 @@ vec4 renderClouds(vec2 pos, vec2 mouse){
 void main() {
 
     vec2 pos = pixToNdc(gl_FragCoord.xy);
-    // vec2 mouse  = pixToNdc(u_mouse);
     vec2 mouse  = u_mouse / MAP_RATIO;
-
-    vec2 off = vec2(u_offset.x, u_offset.y) / MAP_RATIO;
-
-    vec4 beauty = texture(u_texture_0, mirrorUV((pos+off)*MAP_RATIO*0.5+0.5));
-    vec4 clouds = vec4(0,0,0,1);
     
     float an = u_clouds_coverage * 1.0 + 0.750;
     vec2 q = pos / mix(an, 4.0, float(u_state) > 2.5);
     
-    clouds = renderClouds(q + off * 2.0, mouse);
+    vec4 clouds = renderClouds(q, mouse);
 
-    q -= vec2(0.13125,-0.035)*0.5; // offset shadows
+    // shadows
+    if(u_state < 3){
+        
+        float sha = 1.0;
 
-    float sha = 1.0;
-    sha = map(q + off * 1.0, mouse).y;
-    sha = smoothstep(0.5,0.85,sha);
+        q -= vec2(0.13125,-0.035)*0.5; // offset shadows
+        sha = map(q, mouse).y;
+        sha = smoothstep(0.5,0.85,sha);
 
-    clouds.rgb = mix(clouds.rgb, beauty.rgb*0.35, max(1.0-clouds.a,0.0));
-    clouds.a = max(clouds.a, sha);
+        vec4 beauty = texture(u_texture_0, mirrorUV((pos)*MAP_RATIO*0.5+0.5));
+
+        clouds.rgb = mix(clouds.rgb, beauty.rgb*0.35, max(1.0-clouds.a,0.0));
+        clouds.a = max(clouds.a, sha);
+    }
 
     o_color.rgba = clouds;
 }
@@ -33134,7 +33134,7 @@ const mP = {
 };
 function Cv(n, e) {
   tr(e, !1), wi(n, mP);
-  const t = () => Ch(Zn, "$appState", i), [i, r] = Ih(), s = "textures/webgl/beauty_summer_overlays.webp", o = "textures/webgl/beauty_winter_overlays.webp", a = { x: 0, y: 0 }, l = { x: 0, y: 0 }, c = 0.25, u = 0.3;
+  const t = () => Ch(Zn, "$appState", i), [i, r] = Ih(), s = "textures/webgl/85/summer.webp", o = "textures/webgl/85/winter.webp", a = { x: 0, y: 0 }, l = { x: 0, y: 0 }, c = 0.25, u = 0.3;
   let h = c, f, d = -1, m, g = /* @__PURE__ */ Qs(), _ = /* @__PURE__ */ Qs(), p, b;
   const M = { x: 0, y: 0 }, y = { x: 10 / 1e3, y: 10 / 1e3 }, C = { x: 1.8, y: 1.8 }, w = Zn.subscribe((te) => {
     switch (te) {
