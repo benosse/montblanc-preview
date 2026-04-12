@@ -31127,7 +31127,7 @@ class Kw extends NE {
     return super.load(e, s, i, r);
   }
 }
-const Zw = "models/scene_full_92.glb", Jw = "textures/autumn_field_puresky_1k.hdr", In = pr({
+const Zw = "models/scene_full_93.glb", Jw = "textures/autumn_field_puresky_1k.hdr", In = pr({
   envTexture: void 0,
   gltf: void 0,
   hasLoaded: !1,
