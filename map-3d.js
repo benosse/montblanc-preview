@@ -29683,8 +29683,8 @@ const $w = {
   envRotationY: 2.41,
   toneMapping: jg
 }, fp = {
-  [Ue.Summer]: { envIntensity: 1.24, backgroundIntensity: 2, ambientColor: "#f0ffff", ambientIntensity: 0.14, toneMappingExposure: 1 },
-  [Ue.Winter]: { envIntensity: 0.71, backgroundIntensity: 4, ambientColor: "#ccf0ff", ambientIntensity: 0.49, toneMappingExposure: 1 }
+  [Ue.Summer]: { envIntensity: 1.24, backgroundIntensity: 2, ambientColor: "#f0ffff", ambientIntensity: 0.4, toneMappingExposure: 1 },
+  [Ue.Winter]: { envIntensity: 1.04, backgroundIntensity: 3.6, ambientColor: "#ccf0ff", ambientIntensity: 0.56, toneMappingExposure: 1 }
 };
 class jw {
   scene;
@@ -31985,17 +31985,18 @@ void main() {
   focusDistance: 18,
   focusScale: 1.25,
   blurRadius: 3,
-  vignetteStrength: 0.75,
+  vignetteSummer: 0.65,
+  vignetteWinter: 0.75,
   whiteBalanceSummer: "#ffffff",
   whiteBalanceWinter: "#ffffff",
   saturationSummer: 1.5,
-  saturationWinter: 1.6,
+  saturationWinter: 1.62,
   contrastSummer: 1.05,
-  contrastWinter: 1,
+  contrastWinter: 1.2,
   liftSummer: 0.08,
-  liftWinter: 0.015,
+  liftWinter: -0.05,
   gammaSummer: 0.81,
-  gammaWinter: 1,
+  gammaWinter: 1.2,
   grainSummer: 0.035,
   grainWinter: 0.035,
   grainSize: 1.6
@@ -32029,7 +32030,6 @@ class IR {
         focusDistance: { value: Hn.focusDistance },
         focusScale: { value: Hn.focusScale },
         blurRadius: { value: Hn.blurRadius },
-        vignetteStrength: { value: Hn.vignetteStrength },
         //A Color rather than a Vector3: three uploads either to a vec3, and
         //this way resolveMode() can set it straight from the hex.
         //Resolved from the Summer/Winter pairs by resolveMode()
@@ -32039,6 +32039,7 @@ class IR {
         lift: { value: Hn.liftSummer },
         gamma: { value: Hn.gammaSummer },
         grainAmount: { value: Hn.grainSummer },
+        vignetteStrength: { value: Hn.vignetteSummer },
         grainSize: { value: Hn.grainSize }
       },
       vertexShader: wR,
@@ -32097,7 +32098,7 @@ class IR {
   applySettings(e) {
     Object.assign(this.settings, e);
     const t = this.material.uniforms;
-    t.aberrationAmount.value = this.settings.aberrationAmount, t.focusDistance.value = this.settings.focusDistance, t.focusScale.value = this.settings.focusScale, t.blurRadius.value = this.settings.blurRadius * this.renderer.getPixelRatio(), t.vignetteStrength.value = this.settings.vignetteStrength, t.grainSize.value = this.settings.grainSize * this.renderer.getPixelRatio(), this.resolveMode(), this.settings.enabled || this.disposeTarget();
+    t.aberrationAmount.value = this.settings.aberrationAmount, t.focusDistance.value = this.settings.focusDistance, t.focusScale.value = this.settings.focusScale, t.blurRadius.value = this.settings.blurRadius * this.renderer.getPixelRatio(), t.grainSize.value = this.settings.grainSize * this.renderer.getPixelRatio(), this.resolveMode(), this.settings.enabled || this.disposeTarget();
   }
   //Called from Scene.changeMode, next to ModeController and SceneEnvironment.
   //The season only picks which half of each settings pair goes into the uniforms,
@@ -32107,7 +32108,7 @@ class IR {
   }
   resolveMode() {
     const e = this.mode === Ue.Winter, t = this.material.uniforms;
-    t.whiteBalance.value.set(e ? this.settings.whiteBalanceWinter : this.settings.whiteBalanceSummer), t.saturation.value = e ? this.settings.saturationWinter : this.settings.saturationSummer, t.contrast.value = e ? this.settings.contrastWinter : this.settings.contrastSummer, t.lift.value = e ? this.settings.liftWinter : this.settings.liftSummer, t.gamma.value = e ? this.settings.gammaWinter : this.settings.gammaSummer, t.grainAmount.value = e ? this.settings.grainWinter : this.settings.grainSummer;
+    t.whiteBalance.value.set(e ? this.settings.whiteBalanceWinter : this.settings.whiteBalanceSummer), t.saturation.value = e ? this.settings.saturationWinter : this.settings.saturationSummer, t.contrast.value = e ? this.settings.contrastWinter : this.settings.contrastSummer, t.lift.value = e ? this.settings.liftWinter : this.settings.liftSummer, t.gamma.value = e ? this.settings.gammaWinter : this.settings.gammaSummer, t.grainAmount.value = e ? this.settings.grainWinter : this.settings.grainSummer, t.vignetteStrength.value = e ? this.settings.vignetteWinter : this.settings.vignetteSummer;
   }
   dispose() {
     this.disposeTarget(), this.noiseTexture?.dispose(), this.material.dispose(), this.quad.geometry.dispose();
@@ -34894,7 +34895,7 @@ const l2 = {
 };
 function zv(n, e) {
   or(e, !0), Ui(n, l2);
-  const t = un("textures/webgl/vignette_summer_v003.webp"), i = un("textures/webgl/vignette_winter_v003.webp"), r = { x: 0, y: 0 }, s = { x: 0, y: 0 }, a = 0.15, o = 0.3;
+  const t = un("textures/webgl/vignette_summer_v007.webp"), i = un("textures/webgl/vignette_winter_v008.webp"), r = { x: 0, y: 0 }, s = { x: 0, y: 0 }, a = 0.15, o = 0.3;
   let l = a, c, u = -1, h, f, d, p, _;
   const g = { width: 0, height: 0 };
   let m = 2, b;
