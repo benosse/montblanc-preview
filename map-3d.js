@@ -3367,7 +3367,7 @@ const Vg = oi({
         objectName: "panoramique_mt_blanc",
         targetName: "panoramique_mt_blanc_target",
         name: "Panoramique du Mont-Blanc",
-        season: lt.Both,
+        season: lt.Summer,
         cameraName: "cam_panoramique_mt_blanc",
         enableCamera: !0,
         enableModel: !0
@@ -3377,7 +3377,7 @@ const Vg = oi({
         objectName: "la_vormaine",
         targetName: "la_vormaine_target",
         name: "La Vormaine",
-        season: lt.Both,
+        season: lt.Winter,
         cameraName: "cam_la_vormaine",
         enableCamera: !0,
         enableModel: !0
@@ -29468,7 +29468,7 @@ function lp(n) {
 function un(n) {
   return new URL(n, mh).href;
 }
-const Dw = "models/scene_full_198.glb", Lw = "textures/rustig_custom.hdr", Nw = "draco/", Cl = oi({ envTexture: void 0, gltf: void 0 }), Uw = new Iw();
+const Dw = "models/scene_full_201.glb", Lw = "textures/rustig_custom.hdr", Nw = "draco/", Cl = oi({ envTexture: void 0, gltf: void 0 }), Uw = new Iw();
 let cp, up;
 async function Fw() {
   const n = await Uw.loadAsync(un(Lw));
